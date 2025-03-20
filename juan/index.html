@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Carlos</title>
+    <style>
+        :root {
+            --primary-color: #430443;
+            --secondary-color: #5a1a5c;
+            --accent-color: #FFD700;
+            --text-color: rgb(255, 161, 211);
+            --hover-color: #732675;
+            --table-header: #6b246d;
+            --table-alternate: #501952;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .sidebar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary-color);
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+            text-align: center;
+            background-color: var(--primary-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .table-container {
+            width: 80%;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #631051;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 28px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .navbar a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px solid var(--accent-color);
+            background-color: var(--secondary-color);
+        }
+
+        td, th {
+            border: 1px solid #958945;
+            padding: 12px;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: var(--accent-color);
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-alternate);
+        }
+
+        tr:hover {
+            background-color: var(--hover-color);
+        }
+
+        .page-title {
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            padding-top: 50px;
+        }
+
+        .profile-image {
+            width: 80%;
+            border: 3px solid var(--accent-color);
+            border-radius: 50px;
+            max-height: 190px;
+            object-fit: cover;
+        }
+
+        .about-me-title {
+            font-size: 195%;
+            color: var(--accent-color);
+            margin: 20px 0;
+        }
+
+        .about-me-text {
+            font-size: 85%;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .skills-text {
+            font-size: 86%;
+            line-height: 1.5;
+        }
+
+        .table-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .table-link:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .content-wrapper {
+                padding: 10px;
+            }
+
+            .table-container {
+                width: 95%;
+            }
+
+            .navbar a {
+                font-size: 20px;
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- GIF de transição -->
+    <img id="Gif" src="C:\Users\EPA\Documents\codegos\assets\gifs\Transição Juan (online-video-cutter.com) (1).gif" alt="Transição" 
+         style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
+
+    <div class="grid-container">
+        <nav class="navbar">
+            <ul>
+            <a onclick="startTransition('C:\Users\EPA\Documents\codegos\assets\gifs\Transição Juan (online-video-cutter.com) (1).gif')" href="C:\Users\EPA\Documents\codegos\Index.html">Home</a>
+            <a onclick="startTransition('More of me.html')" href="C:\Users\EPA\Documents\codegos\More of me.html">Gallery</a>
+            </ul>
+        </nav>
+
+        <aside class="sidebar">
+            <img src="C:\Users\EPA\Documents\codegos\assets\imgs\lateral\Lateral Juan.png" alt="Imagem decorativa lateral esquerda" loading="lazy">
+        </aside>
+
+        <main class="content-wrapper">
+            <h1 class="page-title">Juan Carlos</h1>
+            
+            <div class="image-container">
+                <img class="profile-image" src="C:\Users\EPA\Documents\codegos\assets\imgs\fotos extras\Spongebob funny image.jpg" alt="Foto de perfil de Juan Carlos" loading="lazy">
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Escola/Curso</th>
+                        <th>Contatos</th>
+                        <th>Nacionalidade/onde vive</th>
+                    </tr>
+                    <tr>
+                        <td><a href="https://epa.edu.pt" class="table-link">Escola Profissional de Aveiro (EPA)</a></td>
+                        <td><a href="tel:913644306" class="table-link">111 111 111</a></td>
+                        <td><a href="https://www.google.com/search?q=Brasil" class="table-link">Brasil</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://epa.edu.pt/course/curso-tecnicoa-de-gestao-e-programacao-de-sistemas-informaticos/" class="table-link">Gestão e Programação de Sistemas Informáticos (GPSI)</a></td>
+                        <td><a href="mailto:a416434@alunos.epa.edu.pt" class="table-link">a416434@alunos.epa.edu.pt</a></td>
+                        <td><a href="https://www.google.com/search?q=Aveiro+Portugal" class="table-link">Aveiro, Portugal</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3 class="about-me-title">Sobre Mim</h3>
+
+            <p class="about-me-text">
+                Olá, me chamo Juan Carlos e tenho 16 anos. Sou estudante da Escola Profissional de Aveiro (EPA), 
+                e estou no curso de Gestão e Programação de Sistemas Informáticos.
+                <br>
+                Possuo conhecimento em Pseudocódigo, HTML, CSS e C. Compreendo inglês e um pouco de espanhol. 
+                Tenho habilidade em desenho e criação de designs
+                <br> em meus tempos livres eu gosto de programar, ouvir musicas, desenhar, brincar com a minha gata e jogar com meus amigos
+                <br><b style="font-size: 23px;">Teto Supremacy</b>
+        </p>
+        </main>
+
+        <aside class="sidebar">
+            <img src="C:\Users\EPA\Documents\codegos\assets\imgs\lateral\Lateral Juan.png" alt="Imagem decorativa lateral direita" loading="lazy">
+        </aside>
+    </div>
+
+    <script>
+        function startTransition(destination) {
+            const transitionGif = document.getElementById('Gif');
+            
+            if (destination === 'C:\Users\EPA\Documents\codegos\Index.html') {
+                // Mostra o GIF
+                transitionGif.style.display = 'block';
+
+                // Toca o áudio de transição
+                const transitionAudio = new Audio('./assets/sounds/myinstants.mp3');
+                transitionAudio.play().catch(error => console.log('Erro ao reproduzir áudio:', error));
+
+                // Aguarda 7 segundos antes de redirecionar
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, 7000);
+            } else {
+                // Para outros links, apenas toca o som de clique e redireciona
+                const clickAudio = new Audio('C:\Users\EPA\Documents\codegos\assets\sounds\s_killaqueencatchphrase.mp3');
+                clickAudio.play().catch(error => console.log('Erro ao reproduzir áudio:', error));
+                
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, 100);
+            }
+        }
+
+        // Adiciona som aos links da tabela
+        document.addEventListener('DOMContentLoaded', function() {
+            const tableLinks = document.querySelectorAll('.table-link');
+            tableLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const clickAudio = new Audio('./assets/sounds/Click.mp3');
+                    clickAudio.play().catch(error => console.log('Erro ao reproduzir áudio:', error));
+                    
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
